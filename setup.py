@@ -1,7 +1,7 @@
 import setuptools
 
 setuptools.setup(
-    name="nbhelpers-tiwo",
+    name="nbhelpers",
     version="0.0.1",
     author="tiwo",
     author_email="tiwocode@gmail.com",
@@ -14,4 +14,5 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.4',
+    install_requires=["see", "tqdm"]
 )
