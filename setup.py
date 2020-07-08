@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="nbhelpers",
-    version="0.0.1",
+    version="0.0.2",
     author="tiwo",
     author_email="tiwocode@gmail.com",
     description="A few helpers I use in IPython notebooks",
