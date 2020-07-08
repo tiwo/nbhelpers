@@ -2,9 +2,9 @@ import IPython
 import os
 import os.path
 import pathlib
-import uuid
 import logging
-import logging
+
+__all__ = ["see", "progress", "Path", "folder"]
 
 logging.basicConfig(
 	level=logging.INFO,
@@ -29,9 +29,12 @@ except ImportError:
 
 class Path(type(pathlib.Path())):
 	def ls(self):
+		results = []
 		for child in self.iterdir():
-			print(os.path.relpath(child, start=self)
+			results.append(
+				os.path.relpath(child, start=self)
 					+ os.sep * child.is_dir())
+		print("\n".join(sorted(results)))
 
 
 folder = Path("..")
