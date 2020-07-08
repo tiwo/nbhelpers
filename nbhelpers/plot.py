@@ -1,3 +1,5 @@
+from contextlib import contextmanager
+
 @contextmanager
 def subplots(nrows, ncols, **kwargs):
     """
@@ -13,3 +15,6 @@ def subplots(nrows, ncols, **kwargs):
     
     for remaining in axes:
         remaining.axis("off")
+
+
+__all__ = ["subplots"]
